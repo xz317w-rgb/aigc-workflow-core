@@ -1,0 +1,22 @@
+{
+  "name": "@aigc-director/workflow-core",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portable workflow orchestration core with opaque skill execution boundaries.",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./src/index.mjs"
+    }
+  },
+  "scripts": {
+    "test": "node --test --test-reporter=spec tests/*.test.mjs",
+    "check:export": "node scripts/check-export.mjs",
+    "verify": "npm run check:export && npm test"
+  },
+  "license": "SEE LICENSE IN LICENSE.md"
+}
